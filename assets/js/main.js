@@ -1,4 +1,4 @@
-// 导航栏 Nav
+/// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close'),
@@ -22,7 +22,8 @@ if (navClose) {
 
 navLinks.forEach(e => e.addEventListener('click', closeMenu))
 
-// 技术栈 Skills
+
+/// ========== 技术栈 Skills ==========
 const skillsContent = document.getElementsByClassName('skills__content')
 const skillsHeader = document.querySelectorAll('.skills__header')
 
@@ -38,7 +39,8 @@ function toggleSkills() {
 
 skillsHeader.forEach(e => e.addEventListener('click', toggleSkills))
 
-// 资历 Qualification
+
+/// ========== 资历 Qualification ==========
 const tabs = document.querySelectorAll('[data-target]'),    // 所有的标签
     tabContents = document.querySelectorAll('[data-content]')   // 所有的内容
 
@@ -58,3 +60,22 @@ function onQualificationTabClick(tab) {
 
 // 为所有标签添加点击事件
 tabs.forEach(tab => tab.addEventListener('click', () => { onQualificationTabClick(tab); }))
+
+
+/// ========== Service ==========
+const modalViews = document.querySelectorAll('.services__modal'),   // 弹窗
+    modalButtons = document.querySelectorAll('.services__button'),  // ViewMore按钮
+    modalCloses = document.querySelectorAll('.services__modal-close')   // 弹窗的关闭按钮
+
+// 显示弹窗，index是弹窗所对应的按钮的序号
+function showModal(index) {
+    modalViews[index].classList.add('active-modal')
+}
+
+// 关闭弹窗
+function closeModal(index) {
+    modalViews[index].classList.remove('active-modal')
+}
+
+modalButtons.forEach((modalButton, index) => modalButton.addEventListener('click', () => { showModal(index); }))
+modalCloses.forEach((modalButton, index) => modalButton.addEventListener('click', () => { closeModal(index); }))
