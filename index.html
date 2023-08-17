@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 引入unicons图标库 -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>骚客.的个人网站</title>
+</head>
+
+<body>
+    <!-- 导航栏 HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Prince.</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-book-open nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-folder-open nav__icon"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contactme
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主页面 MAIN -->
+    <main class="main">
+        <!-- 主页 Home -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <!-- 社交媒体链接 -->
+                    <div class="home__social">
+                        <!-- Github -->
+                        <a href="https://github.com/PrinceSaoKe" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                        <!-- 邮箱 -->
+                        <a href="https://space.bilibili.com/2020136307" target="_blank" class="home__social-icon">
+                            <i class="uil uil-envelope"></i>
+                        </a>
+                        <!-- QQ -->
+                        <a href="https://qm.qq.com/q/zDV5F1RoS6" target="_blank" class="home__social-icon">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                        <!-- 微信 -->
+                        <a href="https://u.wechat.com/MLd2q7ZkhPGqmDjrnwBquis" target="_blank"
+                            class="home__social-icon">
+                            <i class="uil uil-twitter-alt"></i>
+                        </a>
+                    </div>
+
+                    <!-- 头像 Avatar -->
+                    <div class="home__image">
+                        <img src="assets/images/about.jpg" class="avatar">
+                    </div>
+
+                    <!-- 首页简介 -->
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'm Prince</h1>
+                        <h3 class="hom__subtitle">Frontend developer</h3>
+                        <p class="home__description">Dreaming to become a full stack developer. This is my personal
+                            website, wish you enjoy it!</p>
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                        <i class="uil uil-angle-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于 About -->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+
+            <div class="about__container container grid">
+                <img src="assets/images/about.jpg" alt="" class="about__img">
+                <div class="about__data">
+                    <p class="about__description">Undergraduate third year, studying Information Security at FZU</p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">01+</span>
+                            <span class="about__info-name">Years <br> experience</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">03+</span>
+                            <span class="about__info-name">Completed <br> projects</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">00+</span>
+                            <span class="about__info-name">Companies <br> worked</span>
+                        </div>
+                    </div>
+
+                    <!-- 下载简历按钮 -->
+                    <div class="about__buttons">
+                        <a download="assets/pdf/Saoke-Cv.pdf" href="" class="button button--flex">
+                            Download CV <i class="uil uil-import button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术栈 Skills -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!-- 前端 Frontend -->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Frontend developer</h1>
+                                <span class="skills__subtitle">Less than 1 years</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <!-- HTML -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                            </div>
+                            <!-- CSS -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                    <span class="skills__number">35%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+                            <!-- JavaScript -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">35%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                            </div>
+                            <!-- Vue -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Vue</h3>
+                                    <span class="skills__number">20%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__vue"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 移动端 Mobile-end -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-android skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Mobile-end developer</h1>
+                                <span class="skills__subtitle">More than 1 years</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <!-- Flutter -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Flutter</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__flutter"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 后端 Backend -->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Backend developer</h1>
+                                <span class="skills__subtitle">Less than 1 years</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <!-- Flask -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Flask</h3>
+                                    <span class="skills__number">35%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__flask"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 资历 Qualification -->
+        <section class="qualification section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personal journey</span>
+            <div class="qualification__container container">
+
+                <!-- 标签 -->
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
+                    <div class="qualification__button button--flex" data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Work
+                    </div>
+                </div>
+
+                <!-- 内容 -->
+                <div class="qualification__sections">
+                    <!-- 学业 -->
+                    <div class="qualification__content qualification__active" data-content id="education">
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Computer Enginner</h3>
+                                <span class="qualification__subtitle">FZU</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2021 - 2025
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Web Design</h3>
+                                <span class="qualification__subtitle">Spain - Institute</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2025 - ?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Web Development</h3>
+                                <span class="qualification__subtitle">Peru - Institute</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    ? - ?
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- <span class="qualification__line"></span> -->
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Master in Ui/Ux</h3>
+                                <span class="qualification__subtitle">Peru - Institute</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    ? - ?
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 就业 -->
+                    <div class="qualification__content" data-content id="work">
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Software Enginner</h3>
+                                <span class="qualification__subtitle">Tencent</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2021 - 2025
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Web Design</h3>
+                                <span class="qualification__subtitle">Spain - Institute</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2025 - ?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Web Development</h3>
+                                <span class="qualification__subtitle">Peru - Institute</span>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    ? - ?
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- <span class="qualification__line"></span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
