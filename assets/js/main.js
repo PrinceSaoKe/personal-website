@@ -79,3 +79,18 @@ function closeModal(index) {
 
 modalButtons.forEach((modalButton, index) => modalButton.addEventListener('click', () => { showModal(index); }))
 modalCloses.forEach((modalButton, index) => modalButton.addEventListener('click', () => { closeModal(index); }))
+
+/// ========== 项目 Projects ==========
+// 第三方轮播图
+let swiper = new Swiper('.projects__container', {
+    cssMode: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true,
+});

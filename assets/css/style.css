@@ -575,6 +575,7 @@ img {
     color: var(--first-color);
 }
 
+/* ========== Services ========== */
 .services__container {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
@@ -670,4 +671,32 @@ img {
 .active-modal {
     opacity: 1;
     visibility: visible;
+}
+
+/* ========== 项目 Projects ========== */
+.projects__container {
+    overflow: initial;
+}
+
+.projects__content {
+    padding: 0 1.5rem;
+}
+
+.projects__img {
+    width: 265px;
+    border-radius: 0.5rem;
+    justify-self: center;
+}
+
+.projects__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.projects__description {
+    margin-bottom: var(--mb-0-75);
+}
+
+.projects__button:hover .button__icon {
+    transform: translateX(0.25rem);
 }

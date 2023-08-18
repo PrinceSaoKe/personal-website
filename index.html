@@ -8,6 +8,9 @@
 
     <!-- 引入unicons图标库 -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- 引入Swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>骚客.的个人网站</title>
 </head>
@@ -69,19 +72,21 @@
                     <!-- 社交媒体链接 -->
                     <div class="home__social">
                         <!-- Github -->
-                        <a href="https://github.com/PrinceSaoKe" target="_blank" class="home__social-icon">
+                        <a href="https://github.com/PrinceSaoKe" title="Github" target="_blank"
+                            class="home__social-icon">
                             <i class="uil uil-github-alt"></i>
                         </a>
                         <!-- 邮箱 -->
-                        <a href="https://space.bilibili.com/2020136307" target="_blank" class="home__social-icon">
+                        <a href="https://space.bilibili.com/2020136307" title="Email" target="_blank"
+                            class="home__social-icon">
                             <i class="uil uil-envelope"></i>
                         </a>
                         <!-- QQ -->
-                        <a href="https://qm.qq.com/q/zDV5F1RoS6" target="_blank" class="home__social-icon">
+                        <a href="https://qm.qq.com/q/zDV5F1RoS6" title="QQ" target="_blank" class="home__social-icon">
                             <i class="uil uil-facebook-f"></i>
                         </a>
                         <!-- 微信 -->
-                        <a href="https://u.wechat.com/MLd2q7ZkhPGqmDjrnwBquis" target="_blank"
+                        <a href="https://u.wechat.com/MLd2q7ZkhPGqmDjrnwBquis" title="Wechat" target="_blank"
                             class="home__social-icon">
                             <i class="uil uil-twitter-alt"></i>
                         </a>
@@ -89,7 +94,7 @@
 
                     <!-- 头像 Avatar -->
                     <div class="home__image">
-                        <img src="assets/images/about.jpg" class="avatar">
+                        <img src="assets/images/about.jpg" alt="" class="avatar">
                     </div>
 
                     <!-- 首页简介 -->
@@ -575,7 +580,71 @@
                 </div>
             </div>
         </section>
+
+        <!-- 项目 Projects -->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Most recent work</span>
+
+            <div class="projects__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 项目1 布奇 -->
+                    <div class="projects__content grid swiper-slide">
+                        <img src="assets/images/bookkeeping.png" alt="" class="projects__img">
+                        <div class="projects__data">
+                            <h3 class="projects__title">Bookkeeping</h3>
+                            <p class="projects__description">Bookkeeping is an OCR based application for managing
+                                personal finances, which can record bills quickly through image recognition,
+                                photography, and other methods. Through data analysis, it provides effective cost saving
+                                planning. Make bookkeeping more convenient and at ease.</p>
+                            <a href="#" class="button button--flex button--small projects__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 项目2 个人网站 -->
+                    <div class="projects__content grid swiper-slide">
+                        <img src="assets/images/bookkeeping.png" alt="" class="projects__img">
+                        <div class="projects__data">
+                            <h3 class="projects__title">Personal Website</h3>
+                            <p class="projects__description">A responsive layout webpage that introduces myself.</p>
+                            <a href="#" class="button button--flex button--small projects__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 项目3 村知道 -->
+                    <div class="projects__content grid swiper-slide">
+                        <img src="assets/images/cun_zhi_dao.png" alt="" class="projects__img">
+                        <div class="projects__data">
+                            <h3 class="projects__title">Cun Zhi Dao</h3>
+                            <p class="projects__description">An app that promotes rural characteristic culture, helping
+                                users gain a better rural tourism experience by recommending characteristic folk
+                                activities, tourism routes, geographical features, cultural history, and delicious
+                                scenery of nearby villages, strengthening the connection between cities and villages, as
+                                well as the interaction between villages.</p>
+                            <a href="#" class="button button--flex button--small projects__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 添加轮播图箭头 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- 添加页码 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
     </main>
+
+    <!-- Swiper js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <script src="assets/js/main.js"></script>
 </body>
