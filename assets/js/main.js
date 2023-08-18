@@ -84,13 +84,13 @@ modalCloses.forEach((modalButton, index) => modalButton.addEventListener('click'
 // 第三方轮播图
 let swiper = new Swiper('.projects__container', {
     cssMode: true,
+    loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true,
     },
-    mousewheel: true,
-    keyboard: true,
 });
