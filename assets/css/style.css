@@ -444,6 +444,18 @@ img {
     background-color: var(--first-color);
 }
 
+.skills__dart {
+    width: 80%;
+}
+
+.skills__flutter {
+    width: 80%;
+}
+
+.skills__cpp {
+    width: 80%;
+}
+
 .skills__html {
     width: 60%;
 }
@@ -460,12 +472,20 @@ img {
     width: 20%;
 }
 
-.skills__flutter {
-    width: 80%;
+.skills__python {
+    width: 35%;
 }
 
 .skills__flask {
     width: 35%;
+}
+
+.skills__cs {
+    width: 40%;
+}
+
+.skills__u2d {
+    width: 80%;
 }
 
 .skills__close .skills__list {
