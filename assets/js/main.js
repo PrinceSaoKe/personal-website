@@ -82,7 +82,7 @@ modalCloses.forEach((modalButton, index) => modalButton.addEventListener('click'
 
 /// ========== 项目 Projects ==========
 // 第三方轮播图
-let swiper = new Swiper('.projects__container', {
+let swiperProjects = new Swiper('.projects__container', {
     cssMode: true,
     loop: true,
     navigation: {
@@ -93,4 +93,22 @@ let swiper = new Swiper('.projects__container', {
         el: '.swiper-pagination',
         clickable: true,
     },
+});
+
+/// ========== 获奖 Awards ==========
+// 第三方轮播图
+let swiperAwards = new Swiper('.awards__container', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+    breakpoints: {
+        568: {
+            slidesPerView: 2,
+        }
+    }
 });

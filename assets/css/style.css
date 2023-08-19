@@ -6,7 +6,7 @@
 
     /* ========== 颜色 Colors ========== */
     /* 色相，紫色:250，绿色:142，蓝色:230，粉色:340 */
-    --hue-color: 500;
+    --hue-color: 780;
     /* h: hue，色相
        s: saturation，饱和度
        l: lightness，亮度 */
@@ -320,6 +320,15 @@ img {
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
     transition: 0.3s;
+}
+
+.button--white {
+    background-color: #fff;
+    color: var(--first-color);
+}
+
+.button--white:hover {
+    background-color: #fff;
 }
 
 .button--flex {
@@ -735,4 +744,73 @@ img {
 .swiper-button-next,
 .swiper-pagination-bullet {
     outline: none;
+}
+
+/* ========== 联系方式 Contact ========== */
+.contact {
+    text-align: center;
+}
+
+.contact__bg {
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+}
+
+.contact__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.contact__description {
+    margin-bottom: var(--mb-1-5);
+}
+
+.contact__title,
+.contact__description {
+    color: #fff;
+}
+
+.contact__img {
+    width: 232px;
+    justify-self: center;
+}
+
+/* ========== 获奖 Awards ========== */
+.awards__data,
+.awards__header {
+    display: flex;
+}
+
+.awards__data {
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+}
+
+.awards__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.awards__name {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.awards__client {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.awards__description {
+    margin-bottom: var(--mb-2-5);
+}
+
+.awards__icon-star {
+    color: var(--first-color);
+}
+
+.swiper-container .swiper-pagination-awards {
+    bottom: 0;
 }
