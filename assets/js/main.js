@@ -22,6 +22,40 @@ if (navClose) {
 
 navLinks.forEach(e => e.addEventListener('click', closeMenu))
 
+/// ========== 导航栏自动追踪当前section ==========
+// 选中所有带id的<section>
+const sections = document.querySelectorAll('section[id]')
+// 当前所在的<section>
+let currNavItem = document.querySelector('.nav__menu a[href*=home]')
+
+function myfunc() {
+    // 获取当前页面的垂直滚动位置
+    let scrollY = window.scrollY
+
+    sections.forEach(current => {
+        // 当前<section>的高度
+        let sectionHeight = current.offsetHeight
+        // 当前<section>相对于页面顶部的距离，减去50像素
+        let sectionTop = current.offsetTop - 50;
+        // 获取当前<section>的id
+        let sectionId = current.getAttribute('id')
+
+        // 若处于当前<section>
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            // 当前<section>对应的导航按钮
+            let section = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+            // 若当前<section>有在导航栏里
+            if (section) {
+                currNavItem.classList.remove('active-link')
+                currNavItem = section
+                currNavItem.classList.add('active-link')
+            }
+        }
+    })
+}
+
+window.addEventListener('scroll', myfunc)
+
 
 /// ========== 技术栈 Skills ==========
 const skillsContent = document.getElementsByClassName('skills__content')
@@ -112,55 +146,3 @@ let swiperAwards = new Swiper('.awards__container', {
         }
     }
 });
-
-/// ==========  ==========
-// 选中所有带id的<section>
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive() {
-    // 获取当前页面的垂直滚动位置
-    const scrollY = window.scrollY
-
-    sections.forEach(current => {
-        // 当前<section>的高度
-        const sectionHeight = current.offsetHeight
-        // 当前<section>相对于页面顶部的距离，减去50像素
-        const sectionTop = current.offsetTop - 50;
-        // 获取当前<section>的id
-        let sectionId = current.getAttribute('id')
-
-        // 若处于当前<section>则点亮对应导航按钮，否则取消选中对应导航按钮
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']')?.classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']')?.classList.remove('active-link')
-        }
-    })
-
-    // // 遍历所有<section>找到当前所在的<section>
-    // for (const section of sections) {
-    //     // 当前<section>的高度
-    //     const sectionHeight = section.offsetHeight
-    //     // 当前<section>相对于页面顶部的距离，减去50像素
-    //     const sectionTop = section.offsetTop - 50;
-    //     // 获取当前<section>的id
-    //     let sectionId = section.getAttribute('id')
-
-    //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-    //         let current = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-    //         console.log('当前是')
-    //         console.log(current.id)
-    //         if (current) {
-    //             sections.forEach(e => {
-    //                 e.classList.remove('active-link')
-    //                 console.log('已清除')
-    //                 console.log(e.id)
-    //             })
-    //             current.classList.add('active-link')
-    //             break
-    //         }
-    //     }
-    // }
-}
-
-window.addEventListener('scroll', scrollActive)
