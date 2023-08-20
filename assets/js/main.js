@@ -56,6 +56,14 @@ function myfunc() {
 
 window.addEventListener('scroll', myfunc)
 
+/// ========== 导航栏添加阴影 ==========
+function scrollHead() {
+    const nav = document.getElementById('header')
+    if (this.scrollY >= 80) nav.classList.add('scroll-header');
+    else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHead)
+
 
 /// ========== 技术栈 Skills ==========
 const skillsContent = document.getElementsByClassName('skills__content')
