@@ -1030,7 +1030,7 @@ img {
     }
 
     .divider__data {
-        margin-bottom: 3rem;
+        margin: 0 0 3rem 2rem;
     }
 
     .divider__img {
