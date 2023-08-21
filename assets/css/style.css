@@ -6,7 +6,7 @@
 
     /* ========== 颜色 Colors ========== */
     /* 色相，紫色:250，绿色:142，蓝色:230，粉色:340 */
-    --hue-color: 340;
+    --hue-color: 230;
     /* h: hue，色相
        s: saturation，饱和度
        l: lightness，亮度 */
@@ -61,6 +61,33 @@
         --small-font-size: 0.875rem;
         --smaller-font-size: 0.813rem;
     }
+}
+
+/* ========== 暗色主题 ========== */
+body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+}
+
+/* ========== 切换明暗主题按钮 ========== */
+.nav__btns {
+    display: flex;
+    align-items: center;
+}
+
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--first-color-alt);
 }
 
 /* ========== Base ========== */
@@ -740,7 +767,7 @@ img {
     right: -0.5rem;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets {
+.swiper-horizontal>.swiper-pagination-bullets {
     bottom: -2.5rem;
 }
 
@@ -819,7 +846,7 @@ img {
     color: var(--first-color);
 }
 
-.swiper-container .swiper-pagination-awards {
+.swiper .swiper-pagination-awards {
     bottom: 0;
 }
 
@@ -925,7 +952,7 @@ img {
         grid-template-columns: 0.25fr 3fr;
     }
 
-    .home__image {
+    .avatar {
         width: 180px;
     }
 
@@ -987,8 +1014,7 @@ img {
     }
 
     .about__container,
-    /* TODO */
-    .skills__container,
+    /* .skills__container, */
     .projects__content,
     .divider__container,
     /* TODO */
@@ -1002,8 +1028,17 @@ img {
         grid-template-columns: 0.6fr;
         justify-content: center;
     }
+
+    .divider__data {
+        margin-bottom: 3rem;
+    }
+
+    .divider__img {
+        align-self: flex-end;
+    }
 }
 
+/* 平板 */
 @media screen and (min-width: 768px) {
     .container {
         margin-left: auto;
@@ -1066,7 +1101,7 @@ img {
         column-gap: 2rem;
     }
 
-    .home__image {
+    .avatar {
         width: 270px;
     }
 
@@ -1156,6 +1191,10 @@ img {
         padding-top: 0.8rem;
     }
 
+    .divider__img {
+        width: 300px;
+    }
+
     .footer__container {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1215,7 +1254,7 @@ img {
         right: -3.5erm;
     }
 
-    .swiper-container-horizontal>.swiper-pagination-bullets {
+    .swiper-horizontal>.swiper-pagination-bullets {
         bottom: -4.5rem;
     }
 }
