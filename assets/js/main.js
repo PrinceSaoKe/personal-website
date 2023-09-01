@@ -1,26 +1,47 @@
 /// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
+    hueMenu = document.getElementById('hue-menu'),
     navToggle = document.getElementById('nav-toggle'),
+    hueBtn = document.getElementById('hue-button'),
     navClose = document.getElementById('nav-close'),
+    hueClose = document.getElementById('hue-close'),
     navLinks = document.querySelectorAll('.nav__link')
 
-function showMenu() {
-    navMenu.classList.add('show-menu')
+function showMenu(menu) {
+    menu.classList.add('show-menu')
 }
 
-function closeMenu() {
-    navMenu.classList.remove('show-menu')
+function closeMenu(menu) {
+    menu.classList.remove('show-menu')
 }
 
 if (navToggle) {
-    navToggle.addEventListener('click', showMenu)
+    navToggle.addEventListener('click', () => {
+        showMenu(navMenu)
+    })
+}
+
+if (hueBtn) {
+    hueBtn.addEventListener('click', () => {
+        showMenu(hueMenu)
+    })
 }
 
 if (navClose) {
-    navClose.addEventListener('click', closeMenu)
+    navClose.addEventListener('click', () => {
+        closeMenu(navMenu)
+    })
 }
 
-navLinks.forEach(e => e.addEventListener('click', closeMenu))
+if (hueClose) {
+    hueClose.addEventListener('click', () => {
+        closeMenu(hueMenu)
+    })
+}
+
+navLinks.forEach(e => e.addEventListener('click', () => {
+    closeMenu(navMenu)
+}))
 
 /// ========== 导航栏自动追踪当前section ==========
 // 选中所有带id的<section>
@@ -156,7 +177,7 @@ let swiperAwards = new Swiper('.awards__container', {
 });
 
 /// ========== 切换明暗主题 ==========
-const themeButton = document.getElementById('theme-button')
+const themeButton = document.getElementById('light-dark-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
 
@@ -177,3 +198,51 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/// ========== 国际化 ==========
+currLanguage = 'zh'
+
+const translations = {
+    zh: zh_json,
+    en: en_json,
+};
+
+function translateContent(language) {
+    const elements = document.querySelectorAll('[data-i18n-key]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n-key');
+        element.textContent = translations[language][key];
+    });
+}
+
+const translateBtn = document.getElementById('translate')
+
+translateContent(currLanguage)
+
+translateBtn.addEventListener('click', () => {
+    currLanguage = currLanguage == 'en' ? 'zh' : 'en'
+    translateContent(currLanguage)
+})
+
+
+/// ========== 更改主色调 ==========
+// HTML元素
+const root = document.documentElement
+const colorPicker = document.getElementById('color-picker')
+
+// colorPicker.addEventListener('input', () => {
+//     const selectedColor = colorPicker.value
+//     console.log(selectedColor)
+//     root.style.setProperty('--hue-color', selectedColor)
+// })
+
+const hueSlider = document.getElementById('hue-slider');
+const colorPreview = document.getElementById('color-preview');
+
+hueSlider.addEventListener('input', () => {
+    const hueValue = hueSlider.value;
+    root.style.setProperty('--hue-color', hueValue);
+
+    // const hslColor = `hsl(${hueValue}, 69%, 61%)`;
+});

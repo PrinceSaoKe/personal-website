@@ -79,14 +79,14 @@ body.dark-theme {
     align-items: center;
 }
 
-.change-theme {
+.nav__btn {
     font-size: 1.25rem;
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
 }
 
-.change-theme:hover {
+.nav__btn:hover {
     color: var(--first-color-alt);
 }
 
@@ -1088,10 +1088,6 @@ img {
         margin-left: auto;
     }
 
-    .change-theme {
-        margin: 0;
-    }
-
     .home__container {
         row-gap: 5rem;
     }
@@ -1257,4 +1253,28 @@ img {
     .swiper-horizontal>.swiper-pagination-bullets {
         bottom: -4.5rem;
     }
+}
+
+
+/* ========== 色相条 ========== */
+/* 隐藏默认样式 */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+/* 自定义轨道样式 */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: linear-gradient(to right, hsl(0, 69%, 61%), hsl(120, 69%, 61%), hsl(240, 69%, 61%), hsl(360, 69%, 61%));
+    border-radius: 5px;
+}
+
+/* 去除拖动时的默认外边框 */
+input[type="range"]:focus {
+    outline: none;
 }

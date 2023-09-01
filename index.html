@@ -19,46 +19,70 @@
     <!-- 导航栏 HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
+            <!-- 导航栏标题 / Prince. -->
             <a href="#" class="nav__logo">Prince.</a>
+
+            <!-- 导航栏菜单 -->
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
+                            <i class="uil uil-estate nav__icon"></i>
+                            <p data-i18n-key="home">Home</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
+                            <i class="uil uil-user nav__icon"></i>
+                            <p data-i18n-key="about">About</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#qualification" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i></i> Qualification
+                            <i class="uil uil-briefcase-alt nav__icon"></i>
+                            <p data-i18n-key="qualification">Qualification</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <i class="uil uil-book-open nav__icon"></i> Skills
+                            <i class="uil uil-book-open nav__icon"></i>
+                            <p data-i18n-key="skills">Skills</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#projects" class="nav__link">
-                            <i class="uil uil-folder-open nav__icon"></i> Projects
+                            <i class="uil uil-folder-open nav__icon"></i>
+                            <p data-i18n-key="projects">Projects</p>
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contactme
+                            <i class="uil uil-message nav__icon"></i>
+                            <p data-i18n-key="contact">Contactme</p>
                         </a>
                     </li>
                 </ul>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
+
+            <!-- 色相选择滑条 -->
+            <div class="nav__menu" id="hue-menu">
+                <input type="range" id="hue-slider" min="0" max="360" step="1">
+                <i class="uil uil-times nav__close" id="hue-close"></i>
+            </div>
+
+            <!-- 导航栏按钮 -->
             <div class="nav__btns">
                 <!-- 切换明暗主题 -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <i class="uil uil-moon nav__btn" id="light-dark-button"></i>
 
+                <!-- 切换主色调 -->
+                <i class="uil uil-palette nav__btn" id="hue-button"></i>
+
+                <!-- 国际化中英翻译 -->
+                <i class="uil uil-english-to-chinese nav__btn" id="translate"></i>
+
+                <!-- 导航栏开启按钮 -->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
@@ -102,11 +126,12 @@
 
                     <!-- 首页简介 -->
                     <div class="home__data">
-                        <h1 class="home__title">Hi, I'm Prince</h1>
-                        <h3 class="hom__subtitle">Frontend developer</h3>
-                        <p class="home__description">Dreaming to become a full stack developer. This is my personal
+                        <h1 class="home__title" data-i18n-key="home_title">Hi, I'm Prince</h1>
+                        <h3 class="hom__subtitle" data-i18n-key="home_subtitle">Frontend developer</h3>
+                        <p class="home__description" data-i18n-key="home_description">Dreaming to become a full stack
+                            developer. This is my personal
                             website, wish you enjoy it!</p>
-                        <a href="#contact" class="button button--flex">
+                        <a href="#contact" class="button button--flex" data-i18n-key="contact_me">
                             Contact Me <i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
@@ -115,7 +140,7 @@
                 <div class="home__scroll">
                     <a href="#about" class="home__scroll-button button--flex">
                         <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll Down</span>
+                        <span class="home__scroll-name" data-i18n-key="scroll_down">Scroll Down</span>
                         <i class="uil uil-angle-down home__scroll-arrow"></i>
                     </a>
                 </div>
@@ -600,7 +625,8 @@
                                 personal finances, which can record bills quickly through image recognition,
                                 photography, and other methods. Through data analysis, it provides effective cost saving
                                 planning. Make bookkeeping more convenient and at ease.</p>
-                            <a href="#" class="button button--flex button--small projects__button">
+                            <a href="https://github.com/PrinceSaoKe/bookkeeping"
+                                class="button button--flex button--small projects__button">
                                 Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
@@ -612,7 +638,8 @@
                         <div class="projects__data">
                             <h3 class="projects__title">Personal Website</h3>
                             <p class="projects__description">A responsive layout webpage that introduces myself.</p>
-                            <a href="#" class="button button--flex button--small projects__button">
+                            <a href="https://github.com/PrinceSaoKe/personal-website"
+                                class="button button--flex button--small projects__button">
                                 Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
@@ -628,7 +655,8 @@
                                 activities, tourism routes, geographical features, cultural history, and delicious
                                 scenery of nearby villages, strengthening the connection between cities and villages, as
                                 well as the interaction between villages.</p>
-                            <a href="#" class="button button--flex button--small projects__button">
+                            <a href="https://github.com/PrinceSaoKe/cun_zhi_dao"
+                                class="button button--flex button--small projects__button">
                                 Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
@@ -809,6 +837,10 @@
 
     <!-- Swiper js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- zh.js && en.js -->
+    <script src="assets/i18n/zh.js"></script>
+    <script src="assets/i18n/en.js"></script>
 
     <script src="assets/js/main.js"></script>
 </body>
