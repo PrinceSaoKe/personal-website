@@ -494,15 +494,15 @@ img {
 }
 
 .skills__dart {
-    width: 80%;
+    width: 50%;
 }
 
 .skills__flutter {
-    width: 80%;
+    width: 60%;
 }
 
 .skills__cpp {
-    width: 80%;
+    width: 50%;
 }
 
 .skills__html {
@@ -510,7 +510,7 @@ img {
 }
 
 .skills__css {
-    width: 35%;
+    width: 40%;
 }
 
 .skills__js {
@@ -529,12 +529,16 @@ img {
     width: 35%;
 }
 
+.skills__java {
+    width: 20%;
+}
+
 .skills__cs {
     width: 40%;
 }
 
 .skills__u2d {
-    width: 80%;
+    width: 60%;
 }
 
 .skills__close .skills__list {
