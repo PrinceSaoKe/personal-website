@@ -1,10 +1,7 @@
 /// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
-    hueMenu = document.getElementById('hue-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    hueBtn = document.getElementById('hue-button'),
     navClose = document.getElementById('nav-close'),
-    hueClose = document.getElementById('hue-close'),
     navLinks = document.querySelectorAll('.nav__link')
 
 function showMenu(menu) {
@@ -21,21 +18,9 @@ if (navToggle) {
     })
 }
 
-if (hueBtn) {
-    hueBtn.addEventListener('click', () => {
-        showMenu(hueMenu)
-    })
-}
-
 if (navClose) {
     navClose.addEventListener('click', () => {
         closeMenu(navMenu)
-    })
-}
-
-if (hueClose) {
-    hueClose.addEventListener('click', () => {
-        closeMenu(hueMenu)
     })
 }
 
@@ -229,20 +214,40 @@ translateBtn.addEventListener('click', () => {
 /// ========== 更改主色调 ==========
 // HTML元素
 const root = document.documentElement
+const style = getComputedStyle(root)
+const colorPickerModal = document.getElementById('color-picker-modal')
+const hueButton = document.getElementById('hue-button')
 const colorPicker = document.getElementById('color-picker')
-
-// colorPicker.addEventListener('input', () => {
-//     const selectedColor = colorPicker.value
-//     console.log(selectedColor)
-//     root.style.setProperty('--hue-color', selectedColor)
-// })
-
-const hueSlider = document.getElementById('hue-slider');
 const colorPreview = document.getElementById('color-preview');
+const hueSlider = document.getElementById('hue-slider')
+const colorPickerCheck = document.getElementById('color-picker__check')
+const colorPickerClose = document.getElementById('color-picker__close')
+const preHue = style.getPropertyValue('--hue-color')
+
+function showColorPicker(color) {
+    colorPickerModal.style.opacity = '1'
+    colorPickerModal.style.visibility = 'visible'
+    colorPreview.style.backgroundColor = `hsl(${color}, 69%, 61%)`
+}
+
+function closeColorPicker() {
+    colorPickerModal.style.opacity = '0'
+    colorPickerModal.style.visibility = 'hidden'
+}
+
+hueButton.addEventListener('click', () => {
+    showColorPicker(style.getPropertyValue('--hue-color'))
+})
 
 hueSlider.addEventListener('input', () => {
     const hueValue = hueSlider.value;
     root.style.setProperty('--hue-color', hueValue);
 
-    // const hslColor = `hsl(${hueValue}, 69%, 61%)`;
+    colorPreview.style.backgroundColor = `hsl(${hueValue}, 69%, 61%)`
 });
+
+colorPickerClose.addEventListener('click', closeColorPicker)
+
+colorPickerCheck.addEventListener('click', () => {
+    closeColorPicker()
+})

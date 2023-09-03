@@ -197,6 +197,60 @@ img {
     color: var(--first-color);
 }
 
+.nav__color-picker {
+    width: 20rem;
+    height: 14rem;
+    position: fixed;
+    background-color: white;
+    /* 添加一个2像素宽度的黑色边框 */
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color__preview {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#color-picker-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: var(--z-model);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.color-picker__button {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.color-picker__check {
+    bottom: 0.5rem;
+    right: 1rem;
+}
+
+.color-picker__close {
+    bottom: 0.5rem;
+    left: 1rem;
+}
+
 /* 屏幕宽度小于767像素时该样式生效 */
 @media screen and (max-width: 767px) {
     .nav__menu {

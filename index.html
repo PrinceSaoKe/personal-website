@@ -65,23 +65,26 @@
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
 
-            <!-- 色相选择滑条 -->
-            <div class="nav__menu" id="hue-menu">
-                <input type="range" id="hue-slider" min="0" max="360" step="1">
-                <i class="uil uil-times nav__close" id="hue-close"></i>
-            </div>
-
             <!-- 导航栏按钮 -->
             <div class="nav__btns">
                 <!-- 切换明暗主题 -->
                 <i class="uil uil-moon nav__btn" id="light-dark-button"></i>
-
                 <!-- 切换主色调 -->
                 <i class="uil uil-palette nav__btn" id="hue-button"></i>
-
+                <!-- 颜色选择器 -->
+                <div id="color-picker-modal">
+                    <div class="nav__color-picker" id="color-picker">
+                        <div class="grid">
+                            <div class="color__preview" id="color-preview"></div>
+                            <input type="range" id="hue-slider" min="0" max="360" step="1" title="">
+                        </div>
+                        <i class="uil uil-check color-picker__button color-picker__check" id="color-picker__check"></i>
+                        <i class="uil uil-times color-picker__button color-picker__close" id="color-picker__close"></i>
+                    </div>
+                </div>
+                <input type="color" title="hue">
                 <!-- 国际化中英翻译 -->
                 <i class="uil uil-english-to-chinese nav__btn" id="translate"></i>
-
                 <!-- 导航栏开启按钮 -->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
