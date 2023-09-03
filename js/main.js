@@ -1,19 +1,12 @@
 /// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
-    // hueMenu = document.getElementById('hue-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    // hueBtn = document.getElementById('hue-button'),
     navClose = document.getElementById('nav-close'),
-    // hueClose = document.getElementById('hue-close'),
     navLinks = document.querySelectorAll('.nav__link')
 
 function showMenu(menu) {
     menu.classList.add('show-menu')
 }
-
-// function closeMenu(menu) {
-//     menu.classList.remove('show-menu')
-// }
 
 if (navToggle) {
     navToggle.addEventListener('click', () => {
@@ -21,23 +14,11 @@ if (navToggle) {
     })
 }
 
-// if (hueBtn) {
-//     hueBtn.addEventListener('click', () => {
-//         showMenu(hueMenu)
-//     })
-// }
-
 if (navClose) {
     navClose.addEventListener('click', () => {
         closeMenu(navMenu)
     })
 }
-
-// if (hueClose) {
-//     hueClose.addEventListener('click', () => {
-//         closeMenu(hueMenu)
-//     })
-// }
 
 navLinks.forEach(e => e.addEventListener('click', () => {
     closeMenu(navMenu)
