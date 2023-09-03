@@ -8,6 +8,10 @@ function showMenu(menu) {
     menu.classList.add('show-menu')
 }
 
+function closeMenu(menu) {
+    menu.classList.remove('show-menu')
+}
+
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         showMenu(navMenu)
