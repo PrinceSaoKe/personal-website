@@ -90,6 +90,11 @@ body.dark-theme {
     color: var(--first-color-alt);
 }
 
+/* ========== 更改色相 ========== */
+#color-input {
+    display: none;
+}
+
 /* ========== Base ========== */
 * {
     box-sizing: border-box;
