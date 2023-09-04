@@ -1,10 +1,7 @@
 /// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
-    hueMenu = document.getElementById('hue-menu'),
     navToggle = document.getElementById('nav-toggle'),
-    hueBtn = document.getElementById('hue-button'),
     navClose = document.getElementById('nav-close'),
-    hueClose = document.getElementById('hue-close'),
     navLinks = document.querySelectorAll('.nav__link')
 
 function showMenu(menu) {
@@ -21,21 +18,9 @@ if (navToggle) {
     })
 }
 
-if (hueBtn) {
-    hueBtn.addEventListener('click', () => {
-        showMenu(hueMenu)
-    })
-}
-
 if (navClose) {
     navClose.addEventListener('click', () => {
         closeMenu(navMenu)
-    })
-}
-
-if (hueClose) {
-    hueClose.addEventListener('click', () => {
-        closeMenu(hueMenu)
     })
 }
 
@@ -229,20 +214,85 @@ translateBtn.addEventListener('click', () => {
 /// ========== 更改主色调 ==========
 // HTML元素
 const root = document.documentElement
-const colorPicker = document.getElementById('color-picker')
+const hueButton = document.getElementById('hue-button')
+const colorInput = document.getElementById('color-input')
 
-// colorPicker.addEventListener('input', () => {
-//     const selectedColor = colorPicker.value
-//     console.log(selectedColor)
-//     root.style.setProperty('--hue-color', selectedColor)
-// })
+hueButton.addEventListener('click', () => {
+    colorInput.click()
 
-const hueSlider = document.getElementById('hue-slider');
-const colorPreview = document.getElementById('color-preview');
+    // 给 color picker 赋初值
+    // let hue = getComputedStyle(root).getPropertyValue('--hue-color')
+    // colorInput.value = `hsl(${hue}, 69%, 61%)`
+})
 
-hueSlider.addEventListener('input', () => {
-    const hueValue = hueSlider.value;
-    root.style.setProperty('--hue-color', hueValue);
+// hexColor 转 rgb
+function hexToRgb(hexColor) {
+    // 去除可能包含的 '#' 符号
+    hexColor = hexColor.replace('#', '');
 
-    // const hslColor = `hsl(${hueValue}, 69%, 61%)`;
-});
+    // 使用正则表达式将 hex 颜色代码拆分成 R、G、B 分量
+    const match = hexColor.match(/^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
+
+    if (!match) {
+        // 如果颜色代码无效，返回 null 或者你认为合适的值
+        return null;
+    }
+
+    // 将十六进制值转换为十进制
+    const r = parseInt(match[1], 16);
+    const g = parseInt(match[2], 16);
+    const b = parseInt(match[3], 16);
+
+    // 返回 RGB 格式字符串
+    // return `${r},${g},${b}`;
+    return [r, g, b]
+}
+
+// rgb 转 hsl
+// 与浏览器的 color picker 计算的hue值有细微误差
+function rgbToHsl(rgb) {
+    const r = rgb[0] / 255;
+    const g = rgb[1] / 255;
+    const b = rgb[2] / 255;
+
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+
+    let h, s, l = (max + min) / 2;
+
+    if (max === min) {
+        h = s = 0; // achromatic
+    } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+
+        h *= 60;
+    }
+
+    // 将 h, s, l 转换为整数
+    h = Math.round(h);
+    s = Math.round(s * 100);
+    l = Math.round(l * 100);
+
+    return [h, s, l];
+}
+
+colorInput.addEventListener('input', () => {
+    const hexColor = colorInput.value
+    console.log(hexColor)
+    const rgb = hexToRgb(hexColor)
+    console.log(rgb)
+    const hsl = rgbToHsl(rgb)
+    console.log(hsl)
+
+    root.style.setProperty('--hue-color', hsl[0]);
+
+    // 使 s 值和 l 值不被改变
+    // this.value = `hsl(${hsl[0]}, ${hsl[1]}%, ${hsl[2]}%)`
+})

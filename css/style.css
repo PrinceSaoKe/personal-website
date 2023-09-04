@@ -90,6 +90,11 @@ body.dark-theme {
     color: var(--first-color-alt);
 }
 
+/* ========== 更改色相 ========== */
+#color-input {
+    display: none;
+}
+
 /* ========== Base ========== */
 * {
     box-sizing: border-box;
@@ -489,15 +494,15 @@ img {
 }
 
 .skills__dart {
-    width: 80%;
+    width: 50%;
 }
 
 .skills__flutter {
-    width: 80%;
+    width: 60%;
 }
 
 .skills__cpp {
-    width: 80%;
+    width: 50%;
 }
 
 .skills__html {
@@ -505,7 +510,7 @@ img {
 }
 
 .skills__css {
-    width: 35%;
+    width: 40%;
 }
 
 .skills__js {
@@ -524,12 +529,16 @@ img {
     width: 35%;
 }
 
+.skills__java {
+    width: 20%;
+}
+
 .skills__cs {
     width: 40%;
 }
 
 .skills__u2d {
-    width: 80%;
+    width: 60%;
 }
 
 .skills__close .skills__list {
@@ -723,7 +732,7 @@ img {
 }
 
 .projects__content {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 .projects__img {
@@ -1235,7 +1244,7 @@ img {
     }
 
     .projects__content {
-        column-gap: 5rem;
+        column-gap: 1rem;
     }
 
     .swiper-projects-icon {
