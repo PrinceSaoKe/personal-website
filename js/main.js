@@ -1,3 +1,24 @@
+/// ========== 路径 Path ==========
+document.getElementById('icon').href = iconPath
+document.querySelectorAll('img.avatar').forEach(e => {
+    e.src = avatarPath
+})
+document.querySelectorAll('img.about__img').forEach(e => {
+    e.src = aboutPath
+})
+const projects = Array.prototype.slice.call(document.querySelectorAll('img.projects__img'))
+for (const i in projects) {
+    projects[i].src = projectImgPath[i]
+}
+document.querySelectorAll('img.divider__img').forEach(e => {
+    e.src = dividerPath
+})
+const awards = Array.prototype.slice.call(document.querySelectorAll('img.awards__img'))
+for (const i in awards) {
+    awards[i].src = awardImgPath[i]
+}
+
+
 /// ========== 导航栏 Nav ==========
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),

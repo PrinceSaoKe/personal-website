@@ -11,7 +11,7 @@ const en_json = {
     "contact": "Contact",
 
     "home_title": "Hi, I'm Prince",
-    "home_subtitle": "Frontend developer",
+    "home_subtitle": "Mobile-end developer",
     "home_description": "Dreaming to become a full stack developer. This is my personal website, wish you enjoy it!",
     "contact_me": "Contact Me",
     "scroll_down": "Scroll Down",
